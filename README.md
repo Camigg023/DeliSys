@@ -106,6 +106,8 @@ DeliSys/
 
 ## ⚙ Variables de Entorno
 
+cp .env.example .env
+
 Copia `.env.example` como `.env`.
 
 ```env
