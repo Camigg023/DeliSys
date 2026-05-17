@@ -1,79 +1,183 @@
-# DeliSys
-Sistema web administrativo para restaurante familiar
+# 🍽 DeliSys
 
-## Descripción
+Sistema web administrativo para restaurantes familiares.
 
-DeliSys es una plataforma de gestión integral para restaurantes que centraliza en un solo sistema el control de ventas, inventario, empleados y pedidos. Está diseñada para ser rápida, simple y confiable, permitiendo optimizar la operación diaria del negocio y mejorar la toma de decisiones en tiempo real.
+DeliSys centraliza la gestión de ventas, inventario, empleados y pedidos en una plataforma moderna construida con React, Express y Firebase.
 
 ---
 
-## Tecnologías utilizadas
+## 🚀 Tecnologías
 
 ### Frontend
-- React (Vite)
+- React + Vite
 - Tailwind CSS
 - React Router DOM
 - Lucide React
 
 ### Backend
-- Node.js + Express
+- Node.js
+- Express
 
-### Base de datos / servicios
+### Base de datos y servicios
 - Firebase Firestore
+- Firebase Authentication
 
 ---
 
-## Arquitectura
+## 🏗 Arquitectura
 
-El proyecto está estructurado bajo una arquitectura modular basada en componentes y separación de responsabilidades:
+El proyecto implementa una arquitectura modular basada en features y principios de Clean Architecture.
 
-* Presentación: componentes UI en React
-* Lógica de negocio: hooks y servicios
-* Capa de datos: integración con Firebase / APIs externas
-* Configuración: variables de entorno y configuración global
+```text
+src/
+├── config/
+├── features/
+├── services/
+├── shared/
+└── App.jsx
+```
+
+### Clean Architecture por módulo
+
+```text
+DOMAIN
+├── entities/
+├── repositories/
+└── usecases/
+
+DATA
+├── datasources/
+└── repositories/
+
+PRESENTATION
+├── components/
+├── hooks/
+└── pages/
+```
 
 ---
 
-## Requisitos previos
+## 📁 Estructura del Proyecto
 
-Antes de ejecutar el proyecto, asegúrate de tener instalado:
-
-* Node.js (>= 18)
-* npm
-* Git
+```text
+DeliSys/
+├── server/                # Backend Express
+├── src/                   # Frontend React
+├── public/
+├── .env
+├── .env.example
+├── package.json
+└── README.md
+```
 
 ---
 
-## Instalación y ejecución local
+## 👥 Roles del Sistema
 
-### 1. Instalar dependencias
+### 👨‍💼 Administrador
+- Gestión de productos
+- Gestión de empleados
+- Gestión de inventario
+- Reportes
+- Alertas de vencimiento
+- Gestión de horarios
+
+### 💳 Cajero
+- Registro de ventas
+- Gestión de clientes
+- Facturación
+- Historial de ventas
+
+---
+
+## ✨ Funcionalidades
+
+- Autenticación
+- Dashboard administrativo
+- Gestión de productos
+- Gestión de ventas
+- Gestión de clientes
+- Gestión de empleados
+- Inventario
+- Facturación
+- Alertas automáticas
+
+---
+
+## ⚙ Variables de Entorno
+
+Copia `.env.example` como `.env`.
+
+```env
+VITE_FIREBASE_API_KEY=tu_api_key
+VITE_FIREBASE_AUTH_DOMAIN=tu_auth_domain
+VITE_FIREBASE_PROJECT_ID=tu_project_id
+VITE_FIREBASE_STORAGE_BUCKET=tu_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=tu_sender_id
+VITE_FIREBASE_APP_ID=tu_app_id
+```
+
+---
+
+## 📦 Instalación
 
 ```bash
 npm install
 ```
 
-### 2. Ejecutar el proyecto en desarrollo
+---
+
+## ▶ Desarrollo
 
 ```bash
 npm run dev
 ```
 
-### 3. Abrir en el navegador
+Frontend:
 
-```
+```text
 http://localhost:3000
 ```
 
----
+Backend:
 
-## Ramas del proyecto
-
-El flujo de trabajo se maneja con 3 ramas principales:
-
-* main → producción
-* develop → desarrollo activo
-* stage → pruebas / staging
+```text
+http://localhost:4000
+```
 
 ---
 
+## 🚀 Producción
 
+```bash
+npm run build
+npm start
+```
+
+Aplicación completa:
+
+```text
+http://localhost:4000
+```
+
+---
+
+## 🌿 Flujo Git
+
+| Rama | Uso |
+|---|---|
+| main | Producción |
+| develop | Desarrollo |
+
+---
+
+## 👨‍💻 Desarrolladores
+
+- Martin Montoya
+- Camila Gómez
+
+---
+
+## 🍽 DeliSys
+
+Administración inteligente para restaurantes.
